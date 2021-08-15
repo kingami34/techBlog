@@ -1,0 +1,33 @@
+{
+  "name": "techblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "expression": "^0.0.1",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5",
+    "session": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingami34/techBlog.git"
+  },
+  "author": "Jeff Lynch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingami34/techBlog/issues"
+  },
+  "homepage": "https://github.com/kingami34/techBlog#readme"
+}
