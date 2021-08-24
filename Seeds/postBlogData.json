@@ -1,0 +1,15 @@
+
+[
+    {
+        "id": 1,
+        "title": "Everybody please checkout my Blog!",
+        "content": "Looking into the world of leadership, How to be a great leader.",
+        "userId": 1
+    },
+    {
+        "id": 2,
+        "title": "Recruiter",
+        "content": "Finding the right people for the right job.",
+        "userId": 2
+    }
+]
