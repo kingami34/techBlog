@@ -2,6 +2,8 @@
     "cSpell.ignoreWords": [
         "blogpost",
         "exphbs",
-        "resave"
+        "form",
+        "resave",
+        "signup"
     ]
 }
