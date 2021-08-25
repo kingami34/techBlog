@@ -1,5 +1,9 @@
 <!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
+{{#each posts as |post| }}
+<section>
+    <h2>{{post.title}}</h2>
+    <h4>Created by {{post.user.name}}</h4>
+</section>
 
 
 {{/each}}

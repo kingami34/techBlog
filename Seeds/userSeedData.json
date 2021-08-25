@@ -1,12 +1,14 @@
 [
     {
-        "id": 1,
-        "username": "JLynch",
-        "password": "abcd1234"
+        
+        "name": "JLynch",
+        "password": "abcd1234",
+        "email": "J@gmail.com"
     },
     {
-        "id": 2,
-        "username": "Anhdao",
-        "password": "1234abcd"
+        
+        "name": "Anhdao",
+        "password": "1234abcd",
+        "email": "A@gmail.com"
     }
 ]

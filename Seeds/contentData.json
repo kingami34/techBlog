@@ -1,14 +1,14 @@
 [
     {
-        "id": 1,
-        "content": "That's great!",
-        "userId": 1,
-        "blogpostId": 2
+        
+        "comment_text": "That's great!",
+        "user_id": 1,
+        "post_id": 2
     },
     {
-        "id": 2,
-        "content": "It should be good?",
-        "userId": 2,
-        "blogpostId": 2
+        
+        "comment_text": "It should be good?",
+        "user_id": 2,
+        "post_id": 2
     }
 ]
