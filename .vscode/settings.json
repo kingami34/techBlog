@@ -3,11 +3,13 @@
         "anhdao",
         "blogpost",
         "db",
+        "editpost",
         "exphbs",
         "form",
         "jawsdb",
         "resave",
         "signup",
+        "singlepost",
         "techblog",
         "url"
     ]

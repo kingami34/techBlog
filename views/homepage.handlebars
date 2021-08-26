@@ -1,9 +1,15 @@
-<!-- Loop over each object in the projects array -->
-{{#each posts as |post| }}
-<section>
-    <h2>{{post.title}}</h2>
-    <h4>Created by {{post.user.name}}</h4>
-</section>
 
+{{#each posts as |post|}}
+  <section>
+    <header class="startUp container">
+      <h2>{{post.title}}</h2>
+    </header>
+
+    <footer>
+      <div class="gitWork container">
+        <h4>Created by {{post.user.name}}</h4>
+      </div>
+    </footer>
+  </section>
 
 {{/each}}

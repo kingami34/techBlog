@@ -1,0 +1,25 @@
+body{
+    height: 650px;
+    width: 40%;
+    padding: 100px;
+    padding-left: 30%;
+    
+   
+}
+.upTop{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgreen;
+    text-align: 20px;
+    color: black;
+}
+#title{
+    padding: 20px;
+    text-align: center;
+   
+}
+section{
+    background-color: lightslategray;
+    
+}
+
