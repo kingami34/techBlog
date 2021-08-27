@@ -4,41 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-
+  <title> The techBlog</title>
+  <link rel="stylesheet" href="/css/style.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="upTop">
-            <h3>
-                <a href="/">Home</a>
-            </h3>
-            <h3>
-                <a href="/dashboard">Dashboard</a>
-            </h3>
-            {{#if logged_in}}
-            <h3>
-                <button class="no-button" id="logout">Logout</button>
-            </h3>
-            {{else}}
-            <h3>
-                <a href="/login">Login</a>
-            </h3>
-            {{/if}}
-            <h2 id="title">
-                The TechBlog
-            </h2>
-        </div>
 
-    </header>
-    <main>
-        {{{ body }}}
-    </main>
+<body>
+  <header class="startUp">
+    <h1>
+      The techBlog
+    </h1>
+
+
+
+    
+    <nav>
+      <button class="btn"> <a href="/">Home</a></button>
+    
+     
+    {{#if logged_in}}
+      <button class="btn" id="logout">logout</button>
+    {{else}}
+     <button class="btn"> <a href="/login">login</a></button>
+     <button class="btn"> <a href="/signUp">Sign Up</a></button>
+    {{/if}}
+    </nav>
+
+  </header>
+
+
+  <div class="setUp">
+    <h1> Tech is Life </h1>
+    <h2> One coding day at a time </h2>
+  </div>
+
+
+
+  <main class="topDay">
+    {{{ body }}}
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- TODO: Add a comment describing the functionality of this helper -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+
 </body>
 
-{{#if logged_in}}
-<script src="/js/logout.js"></script>
-{{/if}}
 </html>
