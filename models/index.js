@@ -1,7 +1,7 @@
 
-const User = require('./user');
-const Post = require('./post');
-const Comment = require('./Comment');
+const user = require('./user');
+const post = require('./post');
+const comment = require('./comment');
 
 //grouping Models
 User.hasMany(Post, {
