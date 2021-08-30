@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { post, user, comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const postData = await Post.findAll({
+    const postData = await post.findAll({
       include: [
         {
-          model: User,
+          model: user,
           attributes: ['name'],
         },
       ],
@@ -32,7 +32,7 @@ router.get('/project/:id', async (req, res) => {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: user,
           attributes: ['name'],
         },
       ],
@@ -53,9 +53,9 @@ router.get('/project/:id', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await user.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: project }],
     });
 
     const user = userData.get({ plain: true });
@@ -87,6 +87,7 @@ router.get('/signup', (req, res) => {
 
   res.render('login',{sign_up: true});
 
+  comment()
 });
 
 module.exports = router;
