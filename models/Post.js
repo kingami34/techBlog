@@ -37,4 +37,4 @@ post.init(
     }
   );
 
-  module.exports = Post;
+  module.exports = post;
