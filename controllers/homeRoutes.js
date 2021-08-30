@@ -87,7 +87,7 @@ router.get('/signup', (req, res) => {
 
   res.render('login',{sign_up: true});
 
-  comment()
+  // comment()
 });
 
 module.exports = router;
