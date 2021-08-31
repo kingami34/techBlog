@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { post, user, comment } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     const postData = await post.findAll({
       include: [
         {
-          model: user,
+          model: User,
           attributes: ['name'],
         },
       ],
@@ -32,7 +32,7 @@ router.get('/project/:id', async (req, res) => {
     const projectData = await project.findByPk(req.params.id, {
       include: [
         {
-          model: user,
+          model: User,
           attributes: ['name'],
         },
       ],
@@ -53,15 +53,15 @@ router.get('/project/:id', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await user.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: project }],
     });
 
-    const user = userData.get({ plain: true });
+    const User = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      ...User,
       logged_in: true
     });
   } catch (err) {
