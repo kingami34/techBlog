@@ -33,8 +33,7 @@
 
 ## Usage
 
-![image of fileSaver](../)
-
+ ![Test Image ](/public/css/TBtech.PNG)
 
 
 ## License
