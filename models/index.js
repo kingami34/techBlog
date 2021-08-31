@@ -5,15 +5,15 @@ const comment = require('./comment');
 
 //grouping Models
 User.hasMany(post, {
-    foreignKey: 'user_id'
+    foreignKey: 'User_id'
 });
 
 post.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'User_id',
 });
 
 comment.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'User_id'
   });
   
 comment.belongsTo(post, {
@@ -21,7 +21,7 @@ comment.belongsTo(post, {
 });
   
 User.hasMany(comment, {
-    foreignKey: 'user_id'
+    foreignKey: 'User_id'
 });
   
 post.hasMany(comment, {
