@@ -39,6 +39,6 @@
 ## License
 
  ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
---- web app hosted on Heroku that helps shoppers keep track of their groceries expiration dates.
+--- web app hosted on Heroku 
 
   
