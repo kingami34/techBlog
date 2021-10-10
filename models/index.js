@@ -1,31 +1,24 @@
-
-const User = require('./User.js');
-const Post = require('./Post.js');
-const Comment = require('./comment.js')
-
-//grouping Models
-User.hasMany(Post, {
-    foreignKey: 'User_id'
-});
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
 Post.belongsTo(User, {
-    foreignKey: 'User_id',
+    foreignKey: 'userId',
+    onDelete: 'CASCADE'
+});
+
+Post.hasMany(Comment, {
+    foreignKey: 'postId',
+    onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(User, {
-    foreignKey: 'User_id'
-  });
-  
-Comment.belongsTo(Post, {
-    foreignKey: 'post_id'
-});
-  
-User.hasMany(Comment, {
-    foreignKey: 'User_id'
-});
-  
-Post.hasMany(Comment, {
-    foreignKey: 'post_id'
+    foreignKey: 'userId',
+    onDelete: 'CASCADE'
 });
 
-module.exports = {User, Post, Comment};
+module.exports = {
+    User,
+    Comment,
+    Post
+};
