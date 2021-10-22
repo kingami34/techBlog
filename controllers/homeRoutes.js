@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Post, Comment, User } = require("../models/");
 
-// get all posts for homepage
+
 router.get("/", (req, res) => {
     Post.findAll({
             include: [User],
@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-            res.render("homepage", { posts });
+            res.render("allpost", { posts });
         })
         .catch((err) => {
             res.status(500).json(err);
