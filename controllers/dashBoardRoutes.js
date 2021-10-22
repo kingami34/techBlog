@@ -34,7 +34,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
 
-                res.render("edit-post", {
+                res.render("edit", {
                     layout: "dashboard",
                     post
                 });
