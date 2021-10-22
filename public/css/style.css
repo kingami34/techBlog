@@ -1,7 +1,7 @@
 :root {
     --primary: #ffffff;
-    --secondary: #5975f0;
-    --tertiary: #00d3f8;
+    --secondary: red;
+    --tertiary: grey;
     --dark: #0f1b07;
     --border-radius: 0.2rem;
 }
